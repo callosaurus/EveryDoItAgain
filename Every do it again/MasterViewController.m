@@ -39,33 +39,28 @@
 
 
 - (void)insertNewObject:(id)sender {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    Todo *newTodo = [[Todo alloc] initWithContext:context];
-        
-    // If appropriate, configure the new managed object.
-    newTodo.title = @"Sample Title";
-        
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-        abort();
-    }
+    [self performSegueWithIdentifier:@"addToDo" sender:self];
+    
 }
 
 
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"showDetail"])
+    {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Todo *todoObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         [controller setDetailItem:todoObject];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
+    }
+    else if ([[segue identifier] isEqualToString:@"addToDo"])
+    {
+        self.addNewVC = segue.destinationViewController;
+        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+        [self.tableView reloadData];
     }
 }
 

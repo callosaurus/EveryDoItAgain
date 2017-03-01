@@ -15,6 +15,7 @@
 		3FFC692C1E67764800F321C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFC692A1E67764800F321C2 /* Main.storyboard */; };
 		3FFC692E1E67764800F321C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FFC692D1E67764800F321C2 /* Assets.xcassets */; };
 		3FFC69311E67764800F321C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFC692F1E67764800F321C2 /* LaunchScreen.storyboard */; };
+		3FFC693A1E6783E000F321C2 /* AddNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC69391E6783E000F321C2 /* AddNewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		3FFC692D1E67764800F321C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FFC69301E67764800F321C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FFC69321E67764800F321C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FFC69381E6783E000F321C2 /* AddNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewViewController.h; sourceTree = "<group>"; };
+		3FFC69391E6783E000F321C2 /* AddNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				3FFC691F1E67764700F321C2 /* AppDelegate.m */,
 				3FFC69241E67764800F321C2 /* MasterViewController.h */,
 				3FFC69251E67764800F321C2 /* MasterViewController.m */,
+				3FFC69381E6783E000F321C2 /* AddNewViewController.h */,
+				3FFC69391E6783E000F321C2 /* AddNewViewController.m */,
 				3FFC69271E67764800F321C2 /* DetailViewController.h */,
 				3FFC69281E67764800F321C2 /* DetailViewController.m */,
 				3FFC692A1E67764800F321C2 /* Main.storyboard */,
@@ -159,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FFC69291E67764800F321C2 /* DetailViewController.m in Sources */,
+				3FFC693A1E6783E000F321C2 /* AddNewViewController.m in Sources */,
 				3FFC69261E67764800F321C2 /* MasterViewController.m in Sources */,
 				3FFC69231E67764800F321C2 /* Every_do_it_again.xcdatamodeld in Sources */,
 				3FFC69201E67764700F321C2 /* AppDelegate.m in Sources */,
